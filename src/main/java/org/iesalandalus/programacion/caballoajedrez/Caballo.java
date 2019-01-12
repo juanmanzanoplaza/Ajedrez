@@ -121,5 +121,14 @@ public class Caballo {
 			throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 		}
 	}
+	
+	public boolean equals(Object o) {
+		if(!(o instanceof Caballo))
+			return false;
+		Caballo caballo = (Caballo) o;
+		if(this.color.equals(caballo.getColor()) && this.posicion.equals(caballo.getPosicion()))
+			return true;
+		return false;
+	}
 
 }
