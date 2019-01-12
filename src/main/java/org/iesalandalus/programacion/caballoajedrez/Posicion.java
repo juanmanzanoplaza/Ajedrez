@@ -35,4 +35,13 @@ public class Posicion {
 		this.columna = columna;
 	}
 
+	public boolean equals(Object o) {
+		if(!(o instanceof Posicion))
+			return false;
+		Posicion pos = (Posicion) o;
+		if(getFila()==pos.getFila() && getColumna()==pos.getColumna())
+			return true;
+		return false;
+	}
+
 }
