@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.caballoajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Caballo {
 	private Color color;
 	private Posicion posicion;
@@ -60,6 +62,62 @@ public class Caballo {
 		if(posicion == null)
 			throw new IllegalArgumentException("");
 		this.posicion = posicion;
+	}
+
+	public void mover(Direccion direccion) throws OperationNotSupportedException {
+		if(direccion.equals(null))
+			throw new IllegalArgumentException("");
+		char aux;
+		try {
+			switch(direccion) {
+			case ABAJO_DERECHA:
+				aux = this.getPosicion().getColumna();
+				aux++;
+				setPosicion(new Posicion(this.getPosicion().getFila()-2, aux));
+				break;
+			case ABAJO_IZQUIERDA:
+				aux = this.getPosicion().getColumna();
+				aux--;
+				setPosicion(new Posicion(this.getPosicion().getFila()-2, aux));
+				break;
+			case ARRIBA_DERECHA:
+				aux = this.getPosicion().getColumna();
+				aux++;
+				setPosicion(new Posicion(this.getPosicion().getFila()+2, aux));
+				break;
+			case ARRIBA_IZQUIERDA:
+				aux = this.getPosicion().getColumna();
+				aux--;
+				setPosicion(new Posicion(this.getPosicion().getFila()+2, aux));
+				break;
+			case DERECHA_ABAJO:
+				aux = this.getPosicion().getColumna();
+				aux++;
+				aux++;
+				setPosicion(new Posicion(this.getPosicion().getFila()-1, aux));
+				break;
+			case DERECHA_ARRIBA:
+				aux = this.getPosicion().getColumna();
+				aux++;
+				aux++;
+				setPosicion(new Posicion(this.getPosicion().getFila()+1, aux));
+				break;
+			case IZQUIERDA_ABAJO:
+				aux = this.getPosicion().getColumna();
+				aux--;
+				aux--;
+				setPosicion(new Posicion(this.getPosicion().getFila()-1, aux));
+				break;
+			case IZQUIERDA_ARRIBA:
+				aux = this.getPosicion().getColumna();
+				aux--;
+				aux--;
+				setPosicion(new Posicion(this.getPosicion().getFila()+1, aux));
+				break;
+			}
+		} catch (IllegalArgumentException e) {
+			throw new OperationNotSupportedException("");
+		}
 	}
 
 }
