@@ -6,34 +6,34 @@ import org.junit.Test;
 
 public class PosicionTest {
 
-	/*@Test
+	@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
 		posicion = new Posicion(1, 'a');
 		assertEquals(1, posicion.getFila());
 		assertEquals('a', posicion.getColumna());
 	}
-	
+
 	@Test
 	public void constructorNoValidoTest() {
 		Posicion posicion = null;
 		try {
 			posicion = new Posicion(0, 'a');
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Fila no válida.", e.getMessage());
 			assertNull(posicion);
 		}
 		assertNull(posicion);
 		try {
 			posicion = new Posicion(1, 'i');
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Columna no válida.", e.getMessage());
 			assertNull(posicion);
 		}
 	}
-	
+
 	@Test
 	public void constructorCopiaTest() {
 		Posicion posicion = new Posicion(1, 'a');
@@ -41,51 +41,51 @@ public class PosicionTest {
 		assertEquals(posicion, nuevaPosicion);
 		try {
 			nuevaPosicion = new Posicion(null);
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que no se puede copiar una posiciÃ³n nula.");
+			fail("Debería haber saltado una excepción indicando que no se puede copiar una posición nula.");
 		} catch (Exception e) {
-			assertEquals("ERROR: No es posible copiar una posiciÃ³n nula.", e.getMessage());
+			assertEquals("ERROR: No es posible copiar una posición nula.", e.getMessage());
 			assertEquals(posicion, nuevaPosicion);
 		}
 	}
-	
+
 	@Test
 	public void setFilaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
 			posicion.setFila(0);
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Fila no válida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
 		try {
 			posicion.setFila(9);
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Fila no válida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
 	}
-	
+
 	@Test
 	public void setColumnaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
 			posicion.setColumna('`');
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Columna no válida.", e.getMessage());
 			assertEquals('a', posicion.getColumna());
 		}
 		try {
 			posicion.setColumna('i');
-			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
+			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
+			assertEquals("ERROR: Columna no válida.", e.getMessage());
 			assertEquals('a', posicion.getColumna());
 		}
 	}
-	
+
 	@Test
 	public void igualdadTest() {
 		Posicion posicion1, posicion2, posicion3, posicion4, posicion5;
@@ -103,11 +103,11 @@ public class PosicionTest {
 		assertEquals(posicion1, posicion5);
 		assertEquals(posicion1, posicion1);
 	}
-	
+
 	@Test
 	public void toStringTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		assertEquals("[fila=1, columna=a]", posicion.toString());
-	}*/
+	}
 
 }
