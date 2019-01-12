@@ -34,6 +34,14 @@ public class Caballo {
 			setPosicion(new Posicion(8, columna));
 	}
 
+	//Constructor copia
+	public Caballo(Caballo caballo) {
+		if(caballo == null)
+			throw new IllegalArgumentException("");
+		setColor(caballo.getColor());
+		setPosicion(new Posicion(caballo.getPosicion().getFila(), caballo.getPosicion().getColumna()));
+	}
+
 	public Color getColor() {
 		return color;
 	}
