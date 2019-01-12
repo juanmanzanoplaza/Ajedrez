@@ -9,6 +9,11 @@ public class Posicion {
 		setColumna(columna);
 	}
 
+	public Posicion(Posicion pos) {
+		setFila(pos.getFila());
+		setColumna(pos.getColumna());
+	}
+
 	public int getFila() {
 		return fila;
 	}
