@@ -15,7 +15,7 @@ public class Caballo {
 	//Constructor con color
 	public Caballo(Color color) {
 		if(color == null)
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 		setColor(color);
 		if(color.name().equals("BLANCO"))
 			setPosicion(new Posicion(1, 'b'));
@@ -26,9 +26,9 @@ public class Caballo {
 	//Constructor con color y columna
 	public Caballo(Color color, char columna) {
 		if(color==null)
-			throw new IllegalArgumentException("");
+			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 		if(columna!='b' && columna!='g')
-			throw new IllegalArgumentException("");
+			throw new IllegalArgumentException("ERROR: Columna inicial no válida.");
 		setColor(color);
 		if(color.name().equals("BLANCO"))
 			setPosicion(new Posicion(1, columna));
@@ -37,12 +37,14 @@ public class Caballo {
 	}
 
 	//Constructor copia
+	/*
 	public Caballo(Caballo caballo) {
 		if(caballo == null)
 			throw new IllegalArgumentException("");
 		setColor(caballo.getColor());
 		setPosicion(new Posicion(caballo.getPosicion().getFila(), caballo.getPosicion().getColumna()));
 	}
+	*/
 
 	public Color getColor() {
 		return color;
@@ -116,7 +118,7 @@ public class Caballo {
 				break;
 			}
 		} catch (IllegalArgumentException e) {
-			throw new OperationNotSupportedException("");
+			throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 		}
 	}
 
