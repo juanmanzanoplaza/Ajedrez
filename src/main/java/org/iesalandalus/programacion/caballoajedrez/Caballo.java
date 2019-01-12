@@ -130,5 +130,11 @@ public class Caballo {
 			return true;
 		return false;
 	}
+	
+	public String toString() {
+		String cadena = "Caballo [posición=" + this.getPosicion();
+		cadena += ", color=" + this.getColor().name() + "]";
+		return cadena;
+	}
 
 }
