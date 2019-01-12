@@ -9,7 +9,7 @@ public class Caballo {
 		setColor(Color.NEGRO);
 		setPosicion(new Posicion(8,'b'));
 	}
-	
+
 	//Constructor con color
 	public Caballo(Color color) {
 		if(color == null)
@@ -19,6 +19,19 @@ public class Caballo {
 			setPosicion(new Posicion(1, 'b'));
 		else
 			setPosicion(new Posicion(8, 'b'));
+	}
+
+	//Constructor con color y columna
+	public Caballo(Color color, char columna) {
+		if(color==null)
+			throw new IllegalArgumentException("");
+		if(columna!='b' && columna!='g')
+			throw new IllegalArgumentException("");
+		setColor(color);
+		if(color.name().equals("BLANCO"))
+			setPosicion(new Posicion(1, columna));
+		else
+			setPosicion(new Posicion(8, columna));
 	}
 
 	public Color getColor() {
