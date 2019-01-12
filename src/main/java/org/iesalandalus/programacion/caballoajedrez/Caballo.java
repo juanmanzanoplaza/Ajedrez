@@ -115,13 +115,12 @@ public class Caballo {
 				aux--;
 				aux--;
 				setPosicion(new Posicion(this.getPosicion().getFila()+1, aux));
-				break;
 			}
 		} catch (IllegalArgumentException e) {
 			throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 		}
 	}
-	
+
 	public boolean equals(Object o) {
 		if(!(o instanceof Caballo))
 			return false;
@@ -130,7 +129,7 @@ public class Caballo {
 			return true;
 		return false;
 	}
-	
+
 	public String toString() {
 		String cadena = "Caballo [posición=" + this.getPosicion();
 		cadena += ", color=" + this.getColor().name() + "]";
