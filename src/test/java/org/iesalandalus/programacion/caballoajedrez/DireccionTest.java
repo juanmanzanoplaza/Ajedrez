@@ -7,7 +7,7 @@ public class DireccionTest {
 
 	@Test
 	public void direccionesValidasTest() {
-		//Pasar· el test si hemos nombrado bien las direcciones
+		//Pasar√° el test si hemos nombrado bien las direcciones
 		Direccion direccion;
 		direccion = Direccion.ARRIBA_DERECHA;
 		assertEquals(Direccion.ARRIBA_DERECHA, direccion);

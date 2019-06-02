@@ -31,10 +31,10 @@ public class MainApp {
 	}
 
 	private static int elegirOpcion() {
-		//Hay que comprobar que está dentro del rango de opciones.
+		//Hay que comprobar que estï¿½ dentro del rango de opciones.
 		int lectura;
 		do {
-			System.out.println("¿Cuál de las opciones desea ejecutar? (1-5)");
+			System.out.println("Â¿CuÃ¡l de las opciones desea ejecutar? (1-5)");
 			lectura = Entrada.entero();
 		}while(lectura<1 || lectura>5);
 		return lectura;
@@ -68,7 +68,7 @@ public class MainApp {
 	private static Color elegirColor() {
 		char color;
 		do {
-			System.out.println("¿De qué color desea que sea el caballo? (B/N)");
+			System.out.println("Â¿De quÃ© color desea que sea el caballo? (B/N)");
 			color = Entrada.caracter();
 		}while(color!='B' && color!='N');
 		if(color=='B')
@@ -84,7 +84,7 @@ public class MainApp {
 	private static char elegirColumnaInicial() {
 		char columna;
 		do {
-			System.out.println("¿Cuál desea que sea la columna inicial del caballo? (b/g)");
+			System.out.println("Â¿CuÃ¡l desea que sea la columna inicial del caballo? (b/g)");
 			columna = Entrada.caracter();
 		}while(columna!='b' && columna!='g');
 		return columna;
@@ -96,7 +96,7 @@ public class MainApp {
 		} catch (OperationNotSupportedException e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println("La posición actual del caballo es: " + caballo.getPosicion());
+		System.out.println("La posiciÃ³n actual del caballo es: " + caballo.getPosicion());
 	}
 
 	private static Direccion elegirDireccion() {
@@ -111,7 +111,7 @@ public class MainApp {
 			System.out.println("6 - Abajo izquierda.");
 			System.out.println("7 - Izquierda arriba.");
 			System.out.println("8 - Izquierda abajo.");
-			System.out.println("¿Cuál de estos movimientos le gustaría que intentase realizar el caballo? (1-8)");
+			System.out.println("Â¿CuÃ¡l de estos movimientos le gustarÃ­a que intentase realizar el caballo? (1-8)");
 			lectura = Entrada.entero();
 		} while (lectura<1 || lectura>8);
 		switch(lectura) {

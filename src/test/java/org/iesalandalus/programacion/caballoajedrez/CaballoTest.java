@@ -35,7 +35,7 @@ public class CaballoTest {
 		Caballo caballo = null;
 		try {
 			caballo = new Caballo(null);
-			fail("DeberÌa haber saltado una excepciÛn indicando que no se puede crear un caballo de ning˙n color.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que no se puede crear un caballo de ning√∫n color.");
 		} catch (Exception e) {
 			assertEquals("ERROR: No se puede asignar un color nulo.", e.getMessage());
 			assertNull(caballo);
@@ -64,14 +64,14 @@ public class CaballoTest {
 			caballoMalPosicionadoInicialmente = new Caballo(Color.NEGRO, 'd');
 			caballoMalPosicionadoInicialmente = new Caballo(Color.NEGRO, '`');
 			caballoMalPosicionadoInicialmente = new Caballo(Color.NEGRO, 'i');
-			fail("DeberÌa haber saltado una excepciÛn indicando que la columna inicial no era v·lida");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que la columna inicial no era v√°lida");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna inicial no v·lida.", e.getMessage());
+			assertEquals("ERROR: Columna inicial no v√°lida.", e.getMessage());
 			assertNull(caballoMalPosicionadoInicialmente);
 		}
 		try {
 			caballoMalPosicionadoInicialmente = new Caballo(null, 'g');
-			fail("DeberÌa haber saltado una excepciÛn indicando que no se puede crear un caballo de ning˙n color");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que no se puede crear un caballo de ning√∫n color");
 		} catch (IllegalArgumentException e) {
 			assertEquals("ERROR: No se puede asignar un color nulo.", e.getMessage());
 			assertNull(caballoMalPosicionadoInicialmente);
@@ -99,7 +99,7 @@ public class CaballoTest {
 			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
 			assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
 		} catch (OperationNotSupportedException e) {
-			// No deberÌa saltar ninguna excepciÛn ya que los movimientos son v·lidos
+			// No deber√≠a saltar ninguna excepci√≥n ya que los movimientos son v√°lidos
 		}
 	}
 	
@@ -109,72 +109,72 @@ public class CaballoTest {
 		Caballo caballoBlancoG = new Caballo(Color.BLANCO, 'g');
 		try {
 			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ABAJO);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
 		}
 		try {
 			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
 		}
 		try {
 			caballoNegroDefecto.mover(Direccion.ARRIBA_DERECHA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
 		}
 		try {
 			caballoNegroDefecto.mover(Direccion.ARRIBA_IZQUIERDA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
 		}
 		try {
 			caballoNegroDefecto.mover(Direccion.DERECHA_ARRIBA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
 		}
 		try {
 			caballoBlancoG.mover(Direccion.IZQUIERDA_ABAJO);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 		try {
 			caballoBlancoG.mover(Direccion.DERECHA_ABAJO);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 		try {
 			caballoBlancoG.mover(Direccion.DERECHA_ARRIBA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 		try {
 			caballoBlancoG.mover(Direccion.ABAJO_DERECHA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("Deber√≠a haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 		try {
 			caballoBlancoG.mover(Direccion.ABAJO_IZQUIERDA);
-			fail("DeberÌa haber saltado una excepciÛn indicando que el movimiento no es v·lido.");
+			fail("DeberÔøΩa haber saltado una excepci√≥n indicando que el movimiento no es v√°lido.");
 		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no v·lido.", e.getMessage());
+			assertEquals("ERROR: Movimiento no v√°lido.", e.getMessage());
 			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
 		}
 	}
@@ -182,7 +182,7 @@ public class CaballoTest {
 	@Test
 	public void toStringTest() {
 		Caballo caballo = new Caballo();
-		assertEquals("Caballo [posiciÛn=[fila=8, columna=b], color=NEGRO]", caballo.toString());
+		assertEquals("Caballo [posici√≥n=[fila=8, columna=b], color=NEGRO]", caballo.toString());
 	}
 
 }

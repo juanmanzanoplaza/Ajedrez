@@ -19,17 +19,17 @@ public class PosicionTest {
 		Posicion posicion = null;
 		try {
 			posicion = new Posicion(0, 'a');
-			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no válida.", e.getMessage());
+			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
 			assertNull(posicion);
 		}
 		assertNull(posicion);
 		try {
 			posicion = new Posicion(1, 'i');
-			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no válida.", e.getMessage());
+			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
 			assertNull(posicion);
 		}
 	}
@@ -41,9 +41,9 @@ public class PosicionTest {
 		assertEquals(posicion, nuevaPosicion);
 		try {
 			nuevaPosicion = new Posicion(null);
-			fail("Debería haber saltado una excepción indicando que no se puede copiar una posición nula.");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que no se puede copiar una posiciÃ³n nula.");
 		} catch (Exception e) {
-			assertEquals("ERROR: No es posible copiar una posición nula.", e.getMessage());
+			assertEquals("ERROR: No es posible copiar una posiciÃ³n nula.", e.getMessage());
 			assertEquals(posicion, nuevaPosicion);
 		}
 	}
@@ -53,16 +53,16 @@ public class PosicionTest {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
 			posicion.setFila(0);
-			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no válida.", e.getMessage());
+			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
 		try {
 			posicion.setFila(9);
-			fail("Debería haber saltado una excepción indicando que la fila es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la fila es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Fila no válida.", e.getMessage());
+			assertEquals("ERROR: Fila no vÃ¡lida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
 	}
@@ -72,16 +72,16 @@ public class PosicionTest {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
 			posicion.setColumna('`');
-			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no válida.", e.getMessage());
+			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
 			assertEquals('a', posicion.getColumna());
 		}
 		try {
 			posicion.setColumna('i');
-			fail("Debería haber saltado una excepción indicando que la columna es incorrecta");
+			fail("DeberÃ­a haber saltado una excepciÃ³n indicando que la columna es incorrecta");
 		} catch (IllegalArgumentException e) {
-			assertEquals("ERROR: Columna no válida.", e.getMessage());
+			assertEquals("ERROR: Columna no vÃ¡lida.", e.getMessage());
 			assertEquals('a', posicion.getColumna());
 		}
 	}

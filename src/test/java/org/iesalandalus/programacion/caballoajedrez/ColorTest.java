@@ -8,7 +8,7 @@ public class ColorTest {
 
 	@Test
 	public void coloresValidosTest() {
-		//Pasar· el test si se han nombrado correctamente los colores
+		//Pasar√° el test si se han nombrado correctamente los colores
 		Color color;
 		color = Color.BLANCO;
 		assertEquals(Color.BLANCO, color);
